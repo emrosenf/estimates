@@ -8,6 +8,7 @@
 
 #import "EstimateViewSelectionController.h"
 #import "ListEstimateTableViewController.h"
+#import "ImageEntryViewController.h"
 #import "EstimateInputMethod.h"
 
 @interface EstimateViewSelectionController ()
@@ -33,8 +34,8 @@
                     @"class": [ListEstimateTableViewController class]},
                   @{@"title": @"Drill Down"},
                   @{@"title": @"Voice Entry"},
-                  @{@"title": @"Image Entry"}
-                  
+                  @{@"title": @"Image Entry",
+                    @"class": [ImageEntryViewController class]}
                   ];
 
     // Uncomment the following line to preserve selection between presentations.
