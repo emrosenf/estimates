@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EstimateTableViewController.h"
+#import "ListEstimateTableViewController.h"
 @interface LineItemTableViewController : UITableViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (nonatomic, weak) EstimateTableViewController *delegate;
+@property (nonatomic, weak) ListEstimateTableViewController *delegate;
 
 @end

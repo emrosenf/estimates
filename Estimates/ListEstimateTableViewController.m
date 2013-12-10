@@ -7,16 +7,16 @@
 //
 
 #import "LineItemTableViewController.h"
-#import "EstimateTableViewController.h"
+#import "ListEstimateTableViewController.h"
 
 
-@interface EstimateTableViewController ()
+@interface ListEstimateTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *presets;
 
 @end
 
-@implementation EstimateTableViewController
+@implementation ListEstimateTableViewController
 
 - (id)init {
     self = [super initWithStyle:UITableViewStyleGrouped];

@@ -7,7 +7,8 @@
 //
 
 #import "CustomerTableViewController.h"
-#import "EstimateTableViewController.h"
+#import "ListEstimateTableViewController.h"
+#import "EstimateViewSelectionController.h"
 
 @interface CustomerTableViewController ()
 
@@ -28,7 +29,7 @@
 }
 
 - (void) actionAdd:(id)sender {
-    EstimateTableViewController *vc = [EstimateTableViewController new];
+    EstimateViewSelectionController *vc = [EstimateViewSelectionController new];
     vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -83,7 +84,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        EstimateTableViewController *vc = [EstimateTableViewController new];
+        EstimateViewSelectionController *vc = [EstimateViewSelectionController new];
         vc.delegate = self;
         vc.data = self.data[@"estimates"][indexPath.row][@"lineItems"];
         [self.navigationController pushViewController:vc animated:YES];

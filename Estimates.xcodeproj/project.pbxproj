@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207525D51857A02C00E2B6F2 /* EstimateViewSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 207525D41857A02C00E2B6F2 /* EstimateViewSelectionController.m */; };
 		20D12DDA184ED00D00102B82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D12DD9184ED00D00102B82 /* Foundation.framework */; };
 		20D12DDC184ED00D00102B82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D12DDB184ED00D00102B82 /* CoreGraphics.framework */; };
 		20D12DDE184ED00D00102B82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D12DDD184ED00D00102B82 /* UIKit.framework */; };
@@ -15,7 +16,6 @@
 		20D12DEA184ED00D00102B82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12DE9184ED00D00102B82 /* AppDelegate.m */; };
 		20D12DED184ED00D00102B82 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D12DEB184ED00D00102B82 /* Main_iPhone.storyboard */; };
 		20D12DF0184ED00D00102B82 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D12DEE184ED00D00102B82 /* Main_iPad.storyboard */; };
-		20D12DF3184ED00D00102B82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12DF2184ED00D00102B82 /* ViewController.m */; };
 		20D12DF5184ED00D00102B82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D12DF4184ED00D00102B82 /* Images.xcassets */; };
 		20D12DFC184ED00D00102B82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D12DFB184ED00D00102B82 /* XCTest.framework */; };
 		20D12DFD184ED00D00102B82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D12DD9184ED00D00102B82 /* Foundation.framework */; };
@@ -26,7 +26,7 @@
 		20D12E19184EF8AB00102B82 /* CustomerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E18184EF8AB00102B82 /* CustomerTableViewController.m */; };
 		20D12E1C184F006300102B82 /* AHTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E1B184F006300102B82 /* AHTextFieldCell.m */; };
 		20D12E22184F008B00102B82 /* NewCustomerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E21184F008B00102B82 /* NewCustomerTableViewController.m */; };
-		20D12E26184F01E700102B82 /* EstimateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E25184F01E700102B82 /* EstimateTableViewController.m */; };
+		20D12E26184F01E700102B82 /* ListEstimateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E25184F01E700102B82 /* ListEstimateTableViewController.m */; };
 		20D12E29184F105F00102B82 /* LineItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E28184F105F00102B82 /* LineItemTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		207525D31857A02C00E2B6F2 /* EstimateViewSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstimateViewSelectionController.h; sourceTree = "<group>"; };
+		207525D41857A02C00E2B6F2 /* EstimateViewSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstimateViewSelectionController.m; sourceTree = "<group>"; };
+		207525D61857A18400E2B6F2 /* EstimateInputMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EstimateInputMethod.h; sourceTree = "<group>"; };
 		20D12DD6184ED00D00102B82 /* Estimates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Estimates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D12DD9184ED00D00102B82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20D12DDB184ED00D00102B82 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,8 +56,6 @@
 		20D12DE9184ED00D00102B82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20D12DEC184ED00D00102B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		20D12DEF184ED00D00102B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		20D12DF1184ED00D00102B82 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		20D12DF2184ED00D00102B82 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		20D12DF4184ED00D00102B82 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20D12DFA184ED00D00102B82 /* EstimatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EstimatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D12DFB184ED00D00102B82 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -69,8 +70,8 @@
 		20D12E1B184F006300102B82 /* AHTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHTextFieldCell.m; sourceTree = "<group>"; };
 		20D12E20184F008B00102B82 /* NewCustomerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCustomerTableViewController.h; sourceTree = "<group>"; };
 		20D12E21184F008B00102B82 /* NewCustomerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCustomerTableViewController.m; sourceTree = "<group>"; };
-		20D12E24184F01E700102B82 /* EstimateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstimateTableViewController.h; sourceTree = "<group>"; };
-		20D12E25184F01E700102B82 /* EstimateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstimateTableViewController.m; sourceTree = "<group>"; };
+		20D12E24184F01E700102B82 /* ListEstimateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListEstimateTableViewController.h; sourceTree = "<group>"; };
+		20D12E25184F01E700102B82 /* ListEstimateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListEstimateTableViewController.m; sourceTree = "<group>"; };
 		20D12E27184F105F00102B82 /* LineItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineItemTableViewController.h; sourceTree = "<group>"; };
 		20D12E28184F105F00102B82 /* LineItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineItemTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +100,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207525CD18579D7400E2B6F2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				20D12E24184F01E700102B82 /* ListEstimateTableViewController.h */,
+				20D12E25184F01E700102B82 /* ListEstimateTableViewController.m */,
+				20D12E27184F105F00102B82 /* LineItemTableViewController.h */,
+				20D12E28184F105F00102B82 /* LineItemTableViewController.m */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		207525CE18579D7B00E2B6F2 /* Drill Down */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Drill Down";
+			sourceTree = "<group>";
+		};
+		207525CF18579D7F00E2B6F2 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Voice;
+			sourceTree = "<group>";
+		};
+		207525D018579D8500E2B6F2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		207525D118579D9300E2B6F2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				20D12E1A184F006300102B82 /* AHTextFieldCell.h */,
+				20D12E1B184F006300102B82 /* AHTextFieldCell.m */,
+				207525D31857A02C00E2B6F2 /* EstimateViewSelectionController.h */,
+				207525D41857A02C00E2B6F2 /* EstimateViewSelectionController.m */,
+				207525D61857A18400E2B6F2 /* EstimateInputMethod.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		207525D218579DC000E2B6F2 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				20D12E14184EF77E00102B82 /* CustomersListViewController.h */,
+				20D12E15184EF77E00102B82 /* CustomersListViewController.m */,
+				20D12E17184EF8AB00102B82 /* CustomerTableViewController.h */,
+				20D12E18184EF8AB00102B82 /* CustomerTableViewController.m */,
+				20D12E20184F008B00102B82 /* NewCustomerTableViewController.h */,
+				20D12E21184F008B00102B82 /* NewCustomerTableViewController.m */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
 		20D12DCD184ED00D00102B82 = {
 			isa = PBXGroup;
 			children = (
@@ -132,26 +190,16 @@
 		20D12DDF184ED00D00102B82 /* Estimates */ = {
 			isa = PBXGroup;
 			children = (
-				20D12E1A184F006300102B82 /* AHTextFieldCell.h */,
-				20D12E1B184F006300102B82 /* AHTextFieldCell.m */,
+				207525D218579DC000E2B6F2 /* Customer */,
+				207525D118579D9300E2B6F2 /* Common */,
 				20D12DE8184ED00D00102B82 /* AppDelegate.h */,
 				20D12DE9184ED00D00102B82 /* AppDelegate.m */,
-				20D12DEB184ED00D00102B82 /* Main_iPhone.storyboard */,
-				20D12DEE184ED00D00102B82 /* Main_iPad.storyboard */,
-				20D12DF1184ED00D00102B82 /* ViewController.h */,
-				20D12DF2184ED00D00102B82 /* ViewController.m */,
+				207525CE18579D7B00E2B6F2 /* Drill Down */,
+				207525D018579D8500E2B6F2 /* Image */,
 				20D12DF4184ED00D00102B82 /* Images.xcassets */,
+				207525CD18579D7400E2B6F2 /* List */,
 				20D12DE0184ED00D00102B82 /* Supporting Files */,
-				20D12E14184EF77E00102B82 /* CustomersListViewController.h */,
-				20D12E15184EF77E00102B82 /* CustomersListViewController.m */,
-				20D12E17184EF8AB00102B82 /* CustomerTableViewController.h */,
-				20D12E18184EF8AB00102B82 /* CustomerTableViewController.m */,
-				20D12E20184F008B00102B82 /* NewCustomerTableViewController.h */,
-				20D12E21184F008B00102B82 /* NewCustomerTableViewController.m */,
-				20D12E24184F01E700102B82 /* EstimateTableViewController.h */,
-				20D12E25184F01E700102B82 /* EstimateTableViewController.m */,
-				20D12E27184F105F00102B82 /* LineItemTableViewController.h */,
-				20D12E28184F105F00102B82 /* LineItemTableViewController.m */,
+				207525CF18579D7F00E2B6F2 /* Voice */,
 			);
 			path = Estimates;
 			sourceTree = "<group>";
@@ -159,6 +207,8 @@
 		20D12DE0184ED00D00102B82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				20D12DEE184ED00D00102B82 /* Main_iPad.storyboard */,
+				20D12DEB184ED00D00102B82 /* Main_iPhone.storyboard */,
 				20D12DE1184ED00D00102B82 /* Estimates-Info.plist */,
 				20D12DE2184ED00D00102B82 /* InfoPlist.strings */,
 				20D12DE5184ED00D00102B82 /* main.m */,
@@ -284,11 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D12E1C184F006300102B82 /* AHTextFieldCell.m in Sources */,
-				20D12DF3184ED00D00102B82 /* ViewController.m in Sources */,
 				20D12E16184EF77E00102B82 /* CustomersListViewController.m in Sources */,
 				20D12E29184F105F00102B82 /* LineItemTableViewController.m in Sources */,
-				20D12E26184F01E700102B82 /* EstimateTableViewController.m in Sources */,
+				20D12E26184F01E700102B82 /* ListEstimateTableViewController.m in Sources */,
 				20D12DEA184ED00D00102B82 /* AppDelegate.m in Sources */,
+				207525D51857A02C00E2B6F2 /* EstimateViewSelectionController.m in Sources */,
 				20D12E19184EF8AB00102B82 /* CustomerTableViewController.m in Sources */,
 				20D12DE6184ED00D00102B82 /* main.m in Sources */,
 				20D12E22184F008B00102B82 /* NewCustomerTableViewController.m in Sources */,
