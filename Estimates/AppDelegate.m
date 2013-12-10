@@ -7,12 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "CustomersListViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    CustomersListViewController *root = [CustomersListViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
+    self.window.rootViewController = nav;
     return YES;
 }
 							
