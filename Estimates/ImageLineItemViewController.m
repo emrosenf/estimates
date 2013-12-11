@@ -88,7 +88,7 @@
     [editButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [editButton addTarget:self action:@selector(editPhoto:) forControlEvents:UIControlEventTouchUpInside];
     CGPoint buttonCenter = headerview.center;
-    buttonCenter.y = headerview.bounds.size.height - editButton.frame.size.height;
+    buttonCenter.y = headerview.bounds.size.height - editButton.frame.size.height + 16;
     editButton.center = buttonCenter;
     
 
@@ -96,8 +96,8 @@
     
     // Add the preview image into the headerview
     UIImageView * previewView = [UIImageView new];
-    [previewView setContentMode:UIViewContentModeCenter];
-    [previewView setImage:[UIImage imageNamed:@"pacific_open.png"]];
+    [previewView setContentMode:UIViewContentModeScaleAspectFit];
+    [previewView setImage:[UIImage imageNamed:@"splash.png"]];
     [headerview addSubview:previewView];
     [self setImagePreviewView:previewView];
 
