@@ -99,7 +99,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    for (int i = self.indexes.count - 1; i >= 0; i--) {
+        NSIndexPath *path = self.indexes[i];
+        if (path.section == indexPath.section) {
+            [self.indexes removeObjectAtIndex:i];
+        }
+    }
     
     if ([self.indexes containsObject:indexPath]) {
         [self.indexes removeObject:indexPath];
@@ -107,9 +113,10 @@
         [self.indexes addObject:indexPath];
     }
     
-    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView reloadData];
+    
+    
 }
 
 @end
