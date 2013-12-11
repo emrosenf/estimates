@@ -9,6 +9,7 @@
 #import "EstimateViewSelectionController.h"
 #import "ListEstimateTableViewController.h"
 #import "ImageEstimateTableViewController.h"
+#import "DrillDownPrimaryViewController.h"
 #import "EstimateInputMethod.h"
 
 @interface EstimateViewSelectionController ()
@@ -32,7 +33,8 @@
     self.rows = @[
                   @{@"title": @"List Entry",
                     @"class": [ListEstimateTableViewController class]},
-                  @{@"title": @"Drill Down"},
+                  @{@"title": @"Drill Down",
+                    @"class": [DrillDownPrimaryViewController class]},
                   @{@"title": @"Voice Entry"},
                   @{@"title": @"Image Entry",
                     @"class": [ImageEstimateTableViewController class]}

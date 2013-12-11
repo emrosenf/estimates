@@ -30,10 +30,11 @@
     self.title = @"Estimate";
     
     self.presets = [@[
-                      @{@"title": @"Basket of Apples", @"price": @"$10.95"},
-                      @{@"title": @"Gallon of Milk", @"price": @"$3.25"},
-                      @{@"title": @"Carton of Eggs", @"price": @"$1.99"},
-                      @{@"title": @"Guacamole", @"price": @"$4.99"}
+                      @{@"title": @"30A circuit", @"price": @"$240"},
+                      @{@"title": @"20A circuit", @"price": @"$150"},
+                      @{@"title": @"Wall Plate", @"price": @"$20"},
+                      @{@"title": @"4-prong outlet", @"price": @"$60"},
+                      @{@"title": @"Dimmer Switch", @"price": @"$75"}
                       
                       ] mutableCopy];
     

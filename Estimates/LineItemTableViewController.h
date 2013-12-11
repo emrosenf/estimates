@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ListEstimateTableViewController.h"
-@interface LineItemTableViewController : UITableViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+#import <MLPAutoCompleteTextField/MLPAutoCompleteTextField.h>
+@interface LineItemTableViewController : UITableViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate>
 
 @property (nonatomic, weak) ListEstimateTableViewController *delegate;
 
