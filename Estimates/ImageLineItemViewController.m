@@ -13,8 +13,10 @@
 #import "AFPhotoEditorController.h"
 #import "AFPhotoEditorCustomization.h"
 #import "AFOpenGLManager.h"
+#import "AHTextFieldCell.h"
 
-@interface ImageLineItemViewController () <UIImagePickerControllerDelegate,AFPhotoEditorControllerDelegate>
+
+@interface ImageLineItemViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate, AFPhotoEditorControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *cells;
 @property (strong, nonatomic) UIImageView * imagePreviewView;
@@ -72,7 +74,7 @@
     // Add header view to display the image.
     UIView *headerview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 260)];
     headerview.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    headerview.backgroundColor = [UIColor blueColor];
+//    headerview.backgroundColor = [UIColor blueColor];
     
     //add an edit button into headerview
     UIButton *editButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -95,12 +97,11 @@
     // Add the preview image into the headerview
     UIImageView * previewView = [UIImageView new];
     [previewView setContentMode:UIViewContentModeCenter];
-    [previewView setImage:[UIImage imageNamed:@"splash.png"]];
+    [previewView setImage:[UIImage imageNamed:@"pacific_open.png"]];
     [headerview addSubview:previewView];
     [self setImagePreviewView:previewView];
 
     CGRect imageRect = CGRectInset(headerview.bounds, 10.0f, 10.0f);
-//    NSLog(@"%@", NSStringFromCGRect(imageRect));
     imageRect.size.height -= editButton.frame.size.height;
 
     [[self imagePreviewView] setFrame:imageRect];
@@ -110,7 +111,18 @@
     self.firstViewLoad = true;
 
     //setup the cells
-//    self.cells = [NSMutableArray ]
+    self.cells = [NSMutableArray array];
+    
+    for (int i = 0; i < 2; i++) {
+        AHTextFieldCell *cell = [[AHTextFieldCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+        if (i == 0) {
+            cell.placeholder = @"Price";
+            cell.textField.keyboardType = UIKeyboardTypeDecimalPad;
+        } else {
+            cell.placeholder = @"Notes";
+        }
+        [self.cells addObject:cell];
+    }
     
 }
 
@@ -122,6 +134,19 @@
     }
 }
 
+
+- (void) save:(id)sender
+{
+    NSString *price = ((AHTextFieldCell*)self.cells[0]).textField.text;
+    NSString *notes = ((AHTextFieldCell*)self.cells[1]).textField.text;
+
+    //Grab thumbnail, turn into NSData for transport.
+    UIImage *img = [UIImage imageWithCGImage:self.currentAsset.thumbnail];
+    NSData *data = (NSData *)UIImageJPEGRepresentation(img, 6.0f);
+
+    
+    [self.delegate addLineItem:@{@"title": @"New Item", @"price": [NSString stringWithFormat:@"$%@", price], @"notes": notes, @"image":data}];
+}
 
 #pragma makr - Photo Editor
 
@@ -245,10 +270,9 @@
 
 - (void)openImagePicker
 {
-    UIImagePickerController * imagePicker = [UIImagePickerController new];
+    UIImagePickerController *imagePicker = [UIImagePickerController new];
     [imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
     [imagePicker setDelegate:self];
-    
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
@@ -287,14 +311,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (!cell) {
-        //make a generic cell.
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-    }
-    return cell;
+    return self.cells[indexPath.row];
 }
 
 

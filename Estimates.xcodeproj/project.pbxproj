@@ -49,6 +49,7 @@
 		954BABC41857FDD900B4E699 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954BABC31857FDD900B4E699 /* AssetsLibrary.framework */; };
 		954BABC9185810D900B4E699 /* DrillDownPrimaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954BABC6185810D900B4E699 /* DrillDownPrimaryViewController.m */; };
 		954BABCA185810D900B4E699 /* DrillDownSecondaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954BABC8185810D900B4E699 /* DrillDownSecondaryViewController.m */; };
+		954BABCC1858535300B4E699 /* pacific_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 954BABCB1858535300B4E699 /* pacific_open.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		954BABC6185810D900B4E699 /* DrillDownPrimaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrillDownPrimaryViewController.m; sourceTree = "<group>"; };
 		954BABC7185810D900B4E699 /* DrillDownSecondaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrillDownSecondaryViewController.h; sourceTree = "<group>"; };
 		954BABC8185810D900B4E699 /* DrillDownSecondaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrillDownSecondaryViewController.m; sourceTree = "<group>"; };
+		954BABCB1858535300B4E699 /* pacific_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pacific_open.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 		20D12DE0184ED00D00102B82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				954BABCB1858535300B4E699 /* pacific_open.png */,
 				954BAB9E1857EC4700B4E699 /* splash@2x.png */,
 				954BAB9C1857EC3F00B4E699 /* splash.png */,
 				954BAB941857DC4F00B4E699 /* camera.png */,
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D12DF0184ED00D00102B82 /* Main_iPad.storyboard in Resources */,
+				954BABCC1858535300B4E699 /* pacific_open.png in Resources */,
 				20D12DF5184ED00D00102B82 /* Images.xcassets in Resources */,
 				954BABAE1857FAC600B4E699 /* AviarySDKResources.bundle in Resources */,
 				20D12DED184ED00D00102B82 /* Main_iPhone.storyboard in Resources */,

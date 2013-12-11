@@ -14,4 +14,5 @@
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, weak) CustomerTableViewController *delegate;
 
+- (void) addLineItem:(NSDictionary *)lineItem;
 @end

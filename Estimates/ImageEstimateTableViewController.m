@@ -9,6 +9,7 @@
 #import "ImageEstimateTableViewController.h"
 #import "ImageLineItemViewController.h"
 
+
 @interface ImageEstimateTableViewController ()
 
 @end
@@ -24,10 +25,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.title = @"Estimate";
 
     if (!self.data) {
+        self.data = [NSMutableArray array];
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 80)];
         view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         view.backgroundColor = [UIColor clearColor];
@@ -52,10 +54,10 @@
     [self.delegate addEstimate:self.data];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)addLineItem:(NSDictionary *)lineItem {
+    [self.data addObject:lineItem];
+    [self.navigationController popToViewController:self animated:YES];
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.data.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Table view data source
@@ -101,6 +103,13 @@
     
     if (indexPath.section == 0) {
         //line items.
+        cell.textLabel.text = self.data[indexPath.row][@"title"];
+        cell.detailTextLabel.text = self.data[indexPath.row][@"price"];
+        
+        //Unpack NSData and turn it into an image.
+        NSData *data = self.data[indexPath.row][@"image"];
+        cell.imageView.image = [UIImage imageWithData:data];
+
     } else if (indexPath.section == 1) {
         // new item.
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
