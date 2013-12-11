@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomerTableViewController.h"
 
 @interface ImageEstimateTableViewController : UITableViewController
+
+@property (nonatomic, strong) NSMutableArray *data;
+@property (nonatomic, weak) CustomerTableViewController *delegate;
 
 @end

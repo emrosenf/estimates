@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageEstimateTableViewController.h"
 
 @interface ImageLineItemViewController : UITableViewController
-
+    @property (nonatomic, weak) ImageEstimateTableViewController *delegate;
 @end

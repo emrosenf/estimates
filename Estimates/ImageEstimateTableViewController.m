@@ -7,6 +7,7 @@
 //
 
 #import "ImageEstimateTableViewController.h"
+#import "ImageLineItemViewController.h"
 
 @interface ImageEstimateTableViewController ()
 
@@ -16,10 +17,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
+    self = [super initWithStyle:UITableViewStyleGrouped];
     return self;
 }
 
@@ -27,11 +25,31 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.title = @"Estimate";
+
+    if (!self.data) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 80)];
+        view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        view.backgroundColor = [UIColor clearColor];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        button.backgroundColor = UIColorFromRGB(0x2d77b0);
+        button.layer.cornerRadius = 8;
+        [view addSubview:button];
+        int margin = 10;
+        button.frame = CGRectMake(margin, 0, self.view.frame.size.width - 2*margin, 42);
+        button.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [button setTitle:NSLocalizedString(@"Send Estimate", nil) forState:UIControlStateNormal];
+        [button.titleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(save:) forControlEvents:UIControlEventTouchUpInside];
+        button.center = view.center;
+        self.tableView.tableFooterView = view;
+    }
+    
+}
+
+- (void) save:(id)sender {
+    [self.delegate addEstimate:self.data];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,79 +60,68 @@
 
 #pragma mark - Table view data source
 
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"Line Items";
+            break;
+        case 1:
+            return @"New Item";
+        default:
+            break;
+    }
+    return nil;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    if (section == 0) {
+        return self.data.count;
+    }
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    if (!cell) {
+        //make a generic cell.
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
     
-    // Configure the cell...
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    
+    if (indexPath.section == 0) {
+        //line items.
+    } else if (indexPath.section == 1) {
+        // new item.
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.text = @"New Item";
+        cell.imageView.image = [UIImage imageNamed:@"camera.png"];
+    }
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        ImageLineItemViewController *ivc = [ImageLineItemViewController new];
+        ivc.delegate = self;
+        [self.navigationController pushViewController:ivc animated:YES];
+    } else if (indexPath.section == 1) {
+        //  [self addLineItem:self.presets[indexPath.row]];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
- */
 
 @end
