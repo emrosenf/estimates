@@ -49,9 +49,17 @@
         AHTextFieldCell *cell = [[AHTextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         
         switch (i) {
-            case 0:
+            case 0: {
+                MLPAutoCompleteTextField *tf = [[MLPAutoCompleteTextField alloc] initWithFrame:cell.textField.frame];
+                cell.textField = tf;
+                tf.autoCompleteTableAppearsAsKeyboardAccessory = YES;
+                tf.autoCompleteDataSource = self;
+                tf.autoCompleteFontSize = 16.;
+                tf.autoCompleteDelegate = self;
+                tf.autoCompleteTableCellBackgroundColor = [UIColor whiteColor];
                 cell.placeholder = @"Title";
                 break;
+            }
             case 1:
                 cell.placeholder = @"Price";
                 cell.textField.keyboardType = UIKeyboardTypeDecimalPad;
@@ -89,6 +97,43 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - Autocomplete
+
+
+//example of asynchronous fetch:
+- (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
+ possibleCompletionsForString:(NSString *)string
+            completionHandler:(void (^)(NSArray *))handler
+{
+    
+    NSArray *completions = @[@"20A circuit", @"30A circuit", @"Wall Plate", @"4-prong outlet", @"Dimmer wwitch"];
+    
+    handler(completions);
+}
+
+#pragma mark - MLPAutoCompleteTextField Delegate
+
+
+- (BOOL)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
+          shouldConfigureCell:(UITableViewCell *)cell
+       withAutoCompleteString:(NSString *)autocompleteString
+         withAttributedString:(NSAttributedString *)boldedString
+        forAutoCompleteObject:(id<MLPAutoCompletionObject>)autocompleteObject
+            forRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return YES;
+}
+
+- (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
+  didSelectAutoCompleteString:(NSString *)selectedString
+       withAutoCompleteObject:(id<MLPAutoCompletionObject>)selectedObject
+            forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+
 
 #pragma mark - Table view data source
 
