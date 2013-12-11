@@ -28,6 +28,7 @@
 		20D12E22184F008B00102B82 /* NewCustomerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E21184F008B00102B82 /* NewCustomerTableViewController.m */; };
 		20D12E26184F01E700102B82 /* ListEstimateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E25184F01E700102B82 /* ListEstimateTableViewController.m */; };
 		20D12E29184F105F00102B82 /* LineItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D12E28184F105F00102B82 /* LineItemTableViewController.m */; };
+		76D69B7669A84BF0877BA99C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 108217FE9DFF401995E9FCC1 /* libPods.a */; };
 		954BAB931857D61E00B4E699 /* ImageEstimateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954BAB921857D61E00B4E699 /* ImageEstimateTableViewController.m */; };
 		954BAB951857DC4F00B4E699 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 954BAB941857DC4F00B4E699 /* camera.png */; };
 		954BAB981857DDFB00B4E699 /* ImageLineItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954BAB971857DDFB00B4E699 /* ImageLineItemViewController.m */; };
@@ -46,6 +47,8 @@
 		954BABC01857FDBD00B4E699 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954BABBF1857FDBD00B4E699 /* MessageUI.framework */; };
 		954BABC21857FDCE00B4E699 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954BABC11857FDCE00B4E699 /* SystemConfiguration.framework */; };
 		954BABC41857FDD900B4E699 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954BABC31857FDD900B4E699 /* AssetsLibrary.framework */; };
+		954BABC9185810D900B4E699 /* DrillDownPrimaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954BABC6185810D900B4E699 /* DrillDownPrimaryViewController.m */; };
+		954BABCA185810D900B4E699 /* DrillDownSecondaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954BABC8185810D900B4E699 /* DrillDownSecondaryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		108217FE9DFF401995E9FCC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1848821E100048238C33F223 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		207525D31857A02C00E2B6F2 /* EstimateViewSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstimateViewSelectionController.h; sourceTree = "<group>"; };
 		207525D41857A02C00E2B6F2 /* EstimateViewSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstimateViewSelectionController.m; sourceTree = "<group>"; };
 		207525D61857A18400E2B6F2 /* EstimateInputMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EstimateInputMethod.h; sourceTree = "<group>"; };
@@ -120,6 +125,10 @@
 		954BABBF1857FDBD00B4E699 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		954BABC11857FDCE00B4E699 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		954BABC31857FDD900B4E699 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		954BABC5185810D900B4E699 /* DrillDownPrimaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrillDownPrimaryViewController.h; sourceTree = "<group>"; };
+		954BABC6185810D900B4E699 /* DrillDownPrimaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrillDownPrimaryViewController.m; sourceTree = "<group>"; };
+		954BABC7185810D900B4E699 /* DrillDownSecondaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrillDownSecondaryViewController.h; sourceTree = "<group>"; };
+		954BABC8185810D900B4E699 /* DrillDownSecondaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrillDownSecondaryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,7 @@
 				20D12DDE184ED00D00102B82 /* UIKit.framework in Frameworks */,
 				954BABAD1857FAC600B4E699 /* libAviarySDK.a in Frameworks */,
 				20D12DDA184ED00D00102B82 /* Foundation.framework in Frameworks */,
+				76D69B7669A84BF0877BA99C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +182,10 @@
 		207525CE18579D7B00E2B6F2 /* Drill Down */ = {
 			isa = PBXGroup;
 			children = (
+				954BABC5185810D900B4E699 /* DrillDownPrimaryViewController.h */,
+				954BABC6185810D900B4E699 /* DrillDownPrimaryViewController.m */,
+				954BABC7185810D900B4E699 /* DrillDownSecondaryViewController.h */,
+				954BABC8185810D900B4E699 /* DrillDownSecondaryViewController.m */,
 			);
 			name = "Drill Down";
 			sourceTree = "<group>";
@@ -226,6 +240,7 @@
 				20D12E01184ED00D00102B82 /* EstimatesTests */,
 				20D12DD8184ED00D00102B82 /* Frameworks */,
 				20D12DD7184ED00D00102B82 /* Products */,
+				1848821E100048238C33F223 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,6 +271,7 @@
 				20D12DDB184ED00D00102B82 /* CoreGraphics.framework */,
 				20D12DDD184ED00D00102B82 /* UIKit.framework */,
 				20D12DFB184ED00D00102B82 /* XCTest.framework */,
+				108217FE9DFF401995E9FCC1 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -352,9 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20D12E0B184ED00D00102B82 /* Build configuration list for PBXNativeTarget "Estimates" */;
 			buildPhases = (
+				7FA46C1C1A3B4A80A6AA2499 /* Check Pods Manifest.lock */,
 				20D12DD2184ED00D00102B82 /* Sources */,
 				20D12DD3184ED00D00102B82 /* Frameworks */,
 				20D12DD4184ED00D00102B82 /* Resources */,
+				0D857968AA7D4CE397B57D50 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,6 +460,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D857968AA7D4CE397B57D50 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FA46C1C1A3B4A80A6AA2499 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20D12DD2184ED00D00102B82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -450,6 +501,7 @@
 				954BAB981857DDFB00B4E699 /* ImageLineItemViewController.m in Sources */,
 				20D12E1C184F006300102B82 /* AHTextFieldCell.m in Sources */,
 				20D12E16184EF77E00102B82 /* CustomersListViewController.m in Sources */,
+				954BABCA185810D900B4E699 /* DrillDownSecondaryViewController.m in Sources */,
 				20D12E29184F105F00102B82 /* LineItemTableViewController.m in Sources */,
 				20D12E26184F01E700102B82 /* ListEstimateTableViewController.m in Sources */,
 				20D12DEA184ED00D00102B82 /* AppDelegate.m in Sources */,
@@ -457,6 +509,7 @@
 				20D12E19184EF8AB00102B82 /* CustomerTableViewController.m in Sources */,
 				20D12DE6184ED00D00102B82 /* main.m in Sources */,
 				20D12E22184F008B00102B82 /* NewCustomerTableViewController.m in Sources */,
+				954BABC9185810D900B4E699 /* DrillDownPrimaryViewController.m in Sources */,
 				954BAB931857D61E00B4E699 /* ImageEstimateTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,6 +644,7 @@
 		};
 		20D12E0C184ED00D00102B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1848821E100048238C33F223 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -613,6 +667,7 @@
 		};
 		20D12E0D184ED00D00102B82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1848821E100048238C33F223 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
