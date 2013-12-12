@@ -10,6 +10,7 @@
 #import "ListEstimateTableViewController.h"
 #import "ImageEstimateTableViewController.h"
 #import "DrillDownPrimaryViewController.h"
+#import "VoiceEstimateViewController.h"
 #import "EstimateInputMethod.h"
 
 @interface EstimateViewSelectionController ()
@@ -35,7 +36,8 @@
                     @"class": [ListEstimateTableViewController class]},
                   @{@"title": @"Drill Down",
                     @"class": [DrillDownPrimaryViewController class]},
-                  @{@"title": @"Voice Entry"},
+                  @{@"title": @"Voice Entry",
+                    @"class": [VoiceEstimateViewController class]},
                   @{@"title": @"Image Entry",
                     @"class": [ImageEstimateTableViewController class]}
                   ];
